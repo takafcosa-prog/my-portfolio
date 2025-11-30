@@ -1,6 +1,4 @@
-
-
-
+@charset "UTF-8";
 
 /*main-hero*/
 .home-content wrapper {
@@ -13,7 +11,7 @@
 }
 .hero-section .home-content {
     width: 100%;
-    text-align: left; 
+    text-align: center; 
     margin: 0; 
 }
 .page-title {
@@ -183,22 +181,23 @@
 
 /*main-contact*/
 .contact-section .wrapper {
-    max-width: 100%; /* フォームが大きくなりすぎないようにラッパーの幅を調整 */
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 4%;
+    text-align: center; 
 }
 .contact-section h2, 
 .contact-section .contact-info {
     text-align: center;
 }
 .contact-form {
-    /* フォーム自体を中央に配置するために幅を制限し、margin: auto; を適用 */
-    max-width: 100%; 
+    max-width: 600px; 
     width: 100%;
     margin: 30px auto 0; /* 上部に余白を取り、中央寄せ */
     padding: 30px;
     background-color: #f7f7f7; /* 背景色でフォームを区切る */
     border-radius: 8px;
-    
-    /* 立体感を出すためのシャドウ設定 */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
 }
 @media (max-width: 600px) {
@@ -269,3 +268,51 @@
     font-weight: normal;
 }
 
+@media (max-width: 768px) {
+    .wrapper {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    .page-header .header-inner {
+        flex-direction: column; /* ロゴとメニューを縦に並べる */
+        padding: 10px 0;
+    }
+    .main-nav {
+        flex-wrap: wrap; /* 横に並びきらない場合は折り返す */
+        justify-content: center; /* 中央寄せ */
+        font-size: 0.9rem; /* 文字サイズを少し小さく */
+        margin-top: 10px;
+    }
+    .main-nav li {
+        margin-left: 10px; /* メニュー間の隙間を詰める */
+        margin-right: 10px;
+        margin-bottom: 5px; /* 行間を空ける */
+    }
+    .hero-section .home-content { /* 文字を中央揃え */
+        margin-top: 20%; /* スマホ用に上の余白を調整 */
+    }
+    .home-content wrapper {
+        text-align: center;
+    }
+    .works-carousel-container,
+    .works-grid,
+    .works-item {
+        width: 100% !important; 
+        height: 250px; 
+    }
+    .works-carousel-container {
+        height: 250px;
+    }
+
+    .contact-form {
+        width: 100%; /* 親要素の幅に合わせる */
+        margin: 20px auto 0; /* 上下20px、左右自動（中央寄せ） */
+        padding: 20px; /* 内側の余白を少し減らす */
+        box-sizing: border-box; /* パディングを含めて幅100%にする */
+    }
+    /* 説明文も中央寄せに */
+    .contact-info p {
+        text-align: center;
+    }
+}
