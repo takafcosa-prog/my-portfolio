@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+/* ヘッダー固定分の余白確保 */
+.page-header-section {
+    padding-top: 120px; /* 固定ヘッダー(約80px) + 余白 */
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: sans-serif; /* タイトルは読みやすく */
+}
+
+.section-subtitle {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* 各セクションの余白 */
+.section-padding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* ===============================================
+   1. Service List (カード型レイアウト)
+   =============================================== */
+.service-list {
+    display: grid;
+    /* 横幅250px以上で自動的に列を増やす（スマホ1列、PC2~3列） */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #f9f9f9; /* 優しいグレー背景 */
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* ホバー時に少し浮き上がる */
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-color: #FF8C00; /* 枠線をオレンジに */
+}
+
+.service-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+    color: #333;
+    border-bottom: 2px solid #FF8C00; /* 下線アクセント */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* ===============================================
+   2. Pricing Table (料金表)
+   =============================================== */
+.pricing-table h3,
+.flow-section h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+/* テーブル全体のデザイン */
+table {
+    width: 100%;
+    border-collapse: collapse; /* 枠線を重ねる */
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* 影をつける */
+    border-radius: 8px;
+    overflow: hidden; /* 角丸からはみ出さないように */
+}
+
+thead tr {
+    background-color: #FF8C00; /* ヘッダー背景（オレンジ） */
+    color: #fff;
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+/* 1列目（メニュー名）を太字に */
+td:first-child {
+    font-weight: bold;
+    color: #333;
+}
+
+/* スマホ対応：テーブルが横に長すぎる場合はスクロールさせる */
+@media (max-width: 600px) {
+    th, td {
+        padding: 12px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+.pricing-note {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 15px;
+    text-align: right;
+}
+
+/* ===============================================
+   3. Flow Section (制作の流れ)
+   =============================================== */
+.flow-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start; /* 上揃え */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.step-number {
+    background-color: #FF8C00;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* 正円 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* 数字が潰れないようにする */
+    margin-right: 20px;
+}
+
+.step h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.step p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* スマホレイアウト調整 */
+@media (max-width: 480px) {
+    .step {
+        flex-direction: column; /* 縦並びに */
+        align-items: center;
+        text-align: center;
+    }
+    .step-number {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

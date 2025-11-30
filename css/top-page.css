@@ -1,0 +1,271 @@
+
+
+
+
+/*main-hero*/
+.home-content wrapper {
+    text-align: right;
+    margin-top: 10%;
+}
+.home-content p {
+    font-size: 1.125rem;
+    margin: 10px 0 42px;
+}
+.hero-section .home-content {
+    width: 100%;
+    text-align: left; 
+    margin: 0; 
+}
+.page-title {
+    font-size: 2.5rem; /* サイズ調整例 */
+    margin-bottom: 20px;
+}
+.btn {
+    display: inline-block;
+    padding: 15px 40px; 
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.3s;
+}
+.btn--primary {
+    color: #FFF; 
+    background-color: #FF8C00; 
+    border: 2px solid #FF8C00;
+}
+.btn--primary:hover {
+    background-color: #E07B00; 
+    border-color: #E07B00;
+}
+
+/*main-works*/
+#works.works-section {
+    padding-top: 100px;
+    display: block !important;
+}
+#works .wrapper {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.works-carousel-container {
+    width: 800px;
+    max-width: 100%;
+    height: 550px; 
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.works-grid {
+    position: relative; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 495px; 
+}
+.works-item { 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 800px;
+    height: 495px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px; 
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.works-item.is-active {
+    opacity: 1; 
+}
+.works-info {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7); 
+    margin-top: 0; 
+    z-index: 100;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+    text-align: left; 
+    border: none;
+    color: white;
+}
+#works .works-section__title {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+.works-item a { 
+    height: 100%;
+    display: block; 
+    overflow: hidden;
+}
+.works-item .works-image { 
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover; 
+}
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 200; 
+    
+    /* ★デザインの改善★ */
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; /* 円形にする */
+    border: none;
+    background-color: rgba(255, 140, 0, 0.9); /* ブランドカラー（オレンジ）を使用 */
+    color: #FFF; 
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s, transform 0.2s;
+    
+    /* ボタンのテキストを中央揃え */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-btn:hover {
+    background-color: #E07B00; /* ホバーで少し暗くする */
+}
+.nav-btn:active {
+    transform: translateY(-50%) scale(0.95); /* クリック時に少し縮小 */
+}
+.nav-btn:disabled {
+    background-color: rgba(170, 170, 170, 0.5); /* 無効時はグレーアウト */
+    cursor: default;
+}
+
+/* 左ボタン */
+.prev-btn {
+    /* Worksアイテムが隠れないように、アイテムの左右に少し余白を作る */
+    left: 20px; 
+}
+
+/* 右ボタン */
+.next-btn {
+    /* Worksアイテムが隠れないように、アイテムの左右に少し余白を作る */
+    right: 20px;
+}
+
+
+/*main-about*/
+.about-section__text, .skill-list {
+    /* 行の長さを制限し、読みやすくする */
+    max-width: 100%; 
+    width: 100%; /* max-widthを適用するために必要 */
+    /* 行間を広げ、目の疲れを軽減する */
+    line-height: 1.8; 
+}
+.about-section h3 {
+    margin-top: 3em; 
+}
+.skill-list {
+    text-align: left;
+    list-style-type: square;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+/*main-contact*/
+.contact-section .wrapper {
+    max-width: 100%; /* フォームが大きくなりすぎないようにラッパーの幅を調整 */
+}
+.contact-section h2, 
+.contact-section .contact-info {
+    text-align: center;
+}
+.contact-form {
+    /* フォーム自体を中央に配置するために幅を制限し、margin: auto; を適用 */
+    max-width: 100%; 
+    width: 100%;
+    margin: 30px auto 0; /* 上部に余白を取り、中央寄せ */
+    padding: 30px;
+    background-color: #f7f7f7; /* 背景色でフォームを区切る */
+    border-radius: 8px;
+    
+    /* 立体感を出すためのシャドウ設定 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+}
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 15px; 
+    }
+}
+.contact-form .form-group {
+    margin-bottom: 20px;
+    text-align: left; /* ラベルや入力欄は左寄せに戻す */
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* paddingを含めて幅100%になるように */
+    transition: border-color 0.3s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #FF8C00; /* フォーカス時にブランドカラーを使用 */
+    outline: none;
+}
+.contact-form .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #FF8C00; 
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    
+    /* 立体感の演出 */
+    box-shadow: 0 4px #E07B00; /* 濃いめの影（押しボタン風） */
+}
+.contact-form .submit-btn:hover {
+    background-color: #E07B00;
+}
+.contact-form .submit-btn:active {
+    /* ボタンを押した時のアニメーション */
+    transform: translateY(4px);
+    box-shadow: 0 0 #E07B00;
+}
+.contact-form .form-group--agreement {
+    margin-bottom: 25px;
+    display: flex; /* チェックボックスとテキストを横並びにする */
+    align-items: flex-start; /* テキストが中央で揃うように調整 */
+    font-size: 0.95rem; /* テキストを少し小さくする */
+}
+.contact-form #agreement {
+    margin-right: 8px; /* チェックボックスとテキストの間にスペース */
+    margin-top: 2px;
+}
+.contact-form .terms-link {
+    color: #FF8C00; /* ブランドカラーを使用 */
+    text-decoration: underline; /* リンクであることを明確にする */
+}
+.contact-form .required::after {
+    content: " (必須)"; /* 必須マークの表示を明確に */
+    color: red;
+    font-weight: normal;
+}
+

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+  <head>
+    <meta charaset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="Takashi portfolio" />
+    <title>Takashi Kishimoto Portfolio Site</title>
+    <link rel="stylesheet" href="normaliza.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/top-page.css" />
+    <link rel="stylesheet" href="css/background.css" />
+    <script src="js/utils.js" defer></script>
+    <script src="js/works.js" type="module" defer></script>
+    <script src="js/scroller.js" type="module" defer></script>
+    <script src="js/main.js" type="module" defer></script>
+    <script src="js/background.js" type="module" defer></script>
+  </head>
+
+  <body>
+    <div class="background-decor-wrapper">
+      <div class="bg-shape circle-1"></div>
+      <div class="bg-shape circle-2"></div>
+      <div class="bg-shape circle-3"></div>
+      <div class="bg-shape circle-4"></div>
+      <div class="bg-shape circle-5"></div>
+      <div class="bg-shape circle-6"></div>
+      <div class="bg-shape circle-7"></div>
+    </div>
+
+    <div id="page-container">
+
+     <header id="page-header" class="page-header">
+       <div class="header-inner">
+         <h1><a href="index.html" class="home-link"><span class="css-house-icon"></span>Home</a></h1>
+         <nav>
+           <ul class="main-nav">
+             <li class="nav-item"><a href="#works">Works</a></li>
+             <li class="nav-item"><a href="#about">About</a></li>
+             <li><a href="pages/service-price.html">Service/Pricing</a></li>
+             <li class="nav-item nav-item--contact"><a href="#contact">Contact</a></li>
+           </ul> 
+         </nav>
+       </div> 
+     </header>
+
+     <main id="main-content">
+       <div class="hero-section"> <div class="home-content wrapper">
+          <h2 class="page-title">集客と信頼性を高めるWebサイト制作</h2>
+          <p>小規模ビジネス・個人事業主様専門。技術理解を深めた確かな品質で、売上につながるLPを制作します。</p>
+          <a href="#contact" class="btn btn--primary">無料相談・お見積りはこちら</a>
+        </div>
+       </div> 
+
+       <section id="works" class="page-section section-padding works-section">
+        <div class="wrapper">
+         <h2 class="works-section__title">Works</h2>
+         <div class="works-carousel-container">
+           <button class="nav-btn prev-btn" aria-label="前の作品へ移動"> < </button>
+             <ul class="works-grid" id="works-grid">
+               <li class="works-item">
+                 <a href="">
+                   <img src="images/スクリーンショット 2025-11-30 221712.png" class="works-image" alt="ポートフォリオサイト">
+                   <div class="works-image" style="background-color: #f08080;"></div>
+                   <div class="works-info">
+                      <h3>My-portfolio</h3>
+                       <p class="works-section__text">個人製作</p>
+                   </div>
+                  </a>
+               </li>
+               <li class="works-item">
+                 <a href="">
+                   <div class="works-image" style="background-color: #8fbc8f;"></div>
+                   <div class="works-info">
+                      <h3>New Project Title</h3>
+                       <p class="works-section__text">個人製作</p>
+                   </div>
+                  </a>
+               </li>
+               <li class="works-item">
+                 <a href="#">
+                   <div class="works-image" style="background-color: #ffd700;"></div>
+                   <div class="works-info">
+                     <h3>プロジェクト 4: 技術ブログ</h3>
+                     <p class="works-section__text">WordPressテーマ</p>
+                   </div>
+                 </a>
+               </li>
+             </ul>
+           <button class="nav-btn next-btn" aria-label="次の作品へ移動"> > </button>
+          </div>
+        </div>
+        </section>
+
+       <section id="about" class="page-section section-padding about-section">
+        <div class="wrapper">
+         <h2 class="about-section__title">About</h2>
+         <p class="about-section__text">
+           駆け出しエンジニアの岸本昂士と申します。現在、本格的にフロントエンド技術を習得しており、このポートフォリオサイトは、私が学習開始1ヶ月で初めて制作したアウトプットです。
+         </p>
+          <p class="about-section__text">
+           私の制作の原動力は、「自分のアイデアを形にする楽しさ」と「使いやすいUI/UXへの強い関心」です。
+           技術的な経験は浅いですが、その分、新しい知識やトレンドを素直に吸収する高い学習意欲と行動力を持っています。エラー解決を粘り強く行い、着実にスキルを積み上げています。
+         </p>
+    
+         <h3>現在の主な学習内容とスキル</h3>
+          <ul class="skill-list">
+            <li>HTML/CSS: セマンティックなマークアップ、Flexbox/Gridを使ったレスポンシブデザインの基礎を習得中。</li>
+            <li>JavaScript: 基本的な構文とDOM操作に取り組み中。</li>
+            <li>ツール: VS Code、GitHubを使ったバージョン管理の基礎を実践。</li>
+          </ul>
+
+          <p class="about-section__text">
+            現在はWeb制作の基礎固めに集中していますが、将来的にはJavaScriptのフレームワーク（Vue.jsなど）を学び、より動的でパフォーマンスの高いサイトを構築することが目標です。
+            未経験ながらも、この熱意と成長速度をもって、貢献できる機会をいただけることを楽しみにしております。
+         </p>
+        </div>
+       </section>
+
+       <section id="contact" class="page-section section-padding contact-section">
+       <div class="wrapper">
+          <h2 class="contact-section__title">Contact</h2>
+          <div class="contact-info">
+            <p>
+             制作のご依頼やご質問など、お気軽にご連絡ください。<br>
+             通常、2営業日以内にご返信いたします。
+            </p>
+            <h3>メールでのご連絡</h3>
+            <p class="contact-email"><span id="myemail">takashi.kishimoto.web@gmail.com</span></p>
+            <h3>フォームでのご連絡</h3>
+            <p>以下のフォームに必要事項をご記入の上、送信してください。</p>
+         </div>
+
+         <form action="https://formspree.io/f/mdkqkeez" method="POST" class="contact-form">
+           <div class="form-group form-group--agreement">
+            <input type="checkbox" id="agreement" name="agreement" required>
+            <label for="agreement">
+              <a href="../pages/terms.html" target="_blank" class="terms-link">プライバシーポリシー</a>
+              <span class="required"></span>
+            </label>
+           </div>
+           <div class="form-group">
+             <label for="name">お名前 <span class="required"></span></label>
+             <input type="text" id="name" name="name" required placeholder="お名前　or　会社名">
+           </div>
+           <div class="form-group">
+             <label for="email">メールアドレス <span class="required"></span></label>
+             <input type="email" id="email" name="email" required placeholder="example@mail.com">
+           </div>
+           <div class="form-group">
+             <label for="subject">件名 (任意)</label>
+             <input type="text" id="subject" name="subject">
+           </div>
+           <div class="form-group">
+             <label for="message">メッセージ本文 <span class="required"></span></label>
+             <textarea id="message" name="message" rows="6" required placeholder="具体的なご相談内容をご記入ください。"></textarea>
+           </div>
+           <button type="submit" class="submit-btn">送信する</button>
+         </form>
+        </div>
+       </section>
+
+      </main>
+    </div>
+  </body>
+</html>

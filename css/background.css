@@ -1,0 +1,75 @@
+.background-decor-wrapper {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    pointer-events: none; 
+}
+
+/* 共通設定 */
+.bg-shape {
+    position: absolute;
+    opacity: 0.3;
+    
+    /* 位置の移動（transform）はJSで即座に行うため transition なし */
+    /* 形の変化（clip-path, border-radius）は0.2秒かけて滑らかに行う */
+    transition: transform 0s, clip-path 0.2s ease, border-radius 0.2s ease;
+    
+    will-change: transform, clip-path;
+
+    /* ▼ デフォルトの形：正円 ▼ */
+    /* clip-pathで円を定義しておくと、多角形への変形がスムーズです */
+    clip-path: circle(50% at 50% 50%);
+    /* ※サークルの色は既存のクラスで指定されているため省略 */
+}
+
+/* ▼ 下にスクロール中（下向き矢印） ▼ */
+body.is-scrolling-down .bg-shape {
+    /* 丸みをなくす */
+    border-radius: 0 !important; 
+    /* 下向きの三角形（矢印）に変形 */
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
+
+/* ▼ 上にスクロール中（上向き矢印） ▼ */
+body.is-scrolling-up .bg-shape {
+    /* 丸みをなくす */
+    border-radius: 0 !important;
+    /* 上向きの三角形（矢印）に変形 */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+
+/* --- 各サークルの色とサイズ設定（以前のまま） --- */
+.circle-1 {
+    width: 250px; 
+    height: 250px;
+    background-color: #FF8C00; 
+    top: 10%; left: 15%; opacity: 0.3;
+}
+.circle-2 {
+    width: 150px; height: 150px; background-color: #00BFFF; 
+    bottom: 5%; right: 10%; opacity: 0.25;
+}
+.circle-3 {
+    width: 80px; height: 80px; background-color: #3CB371; 
+    top: 40%; right: 30%; opacity: 0.4;
+}
+.circle-4 {
+    width: 350px; height: 350px; background-color: #FF6347; 
+    bottom: 20%; left: 5%; opacity: 0.15;
+}
+.circle-5 {
+    width: 180px; height: 180px; background-color: #DAA520; 
+    top: 5%; right: 50%; opacity: 0.35;
+}
+.circle-6 {
+    width: 200px; height: 200px; background-color: #6495ED; 
+    top: 20%; right: 7%; opacity: 0.3;
+}
+.circle-7 {
+    width: 60px; height: 60px; background-color: #FF4500; 
+    bottom: 15%; left: 25%; opacity: 0.5;
+}
